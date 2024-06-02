@@ -34,10 +34,10 @@ Therefore, we have
 where
 %
 \begin{equation}
-\begin{align}
+\begin{aligned}
 A_{ij} &= \sum_{n = 1}^{N} x_n^{i + j}, \\
 T_i &= \sum_{n = 1}^{N} x_n^i t_n.
-\end{align}
+\end{aligned}
 \end{equation}
 
 
@@ -75,8 +75,41 @@ Therefore, we have
 where
 %
 \begin{equation}
-\begin{align}
+\begin{aligned}
 \tilde{A}_{ij} &= \sum_{n = 1}^{N} x_n^{i + j} + \lambda \delta_{ij}, \\
 T_i &= \sum_{n = 1}^{N} x_n^i t_n.
-\end{align}
+\end{aligned}
 \end{equation}
+
+
+\subsection{}
+Let $a$, $o$ $l$ be the events where an apple, orange and lime are selected respectively.
+The probability that an apple is selected is given by
+%
+\begin{equation}
+p(a) = \frac{1}{5} \frac{3}{10} + \frac{1}{5} \frac{1}{2} + \frac{3}{5} \frac{3}{10} = \frac{17}{50}.
+\end{equation}
+%
+
+If an orange is selected, the probability that it came from the geen box is given by
+%
+\begin{equation}
+p(g | o) = \frac{p(g, o)}{p(o)}.
+\end{equation}
+%
+Since 
+%
+\begin{equation}
+\begin{aligned}
+p(g, o) &= \frac{3}{5} \frac{3}{10} = \frac{9}{50}, \\
+p(o) & = \frac{1}{5} \frac{2}{5} + \frac{1}{5} \frac{1}{2} + \frac{3}{5} \frac{3}{10} = \frac{9}{25},
+\end{aligned}
+\end{equation}
+%
+we have
+%
+\begin{equation}
+p(g | o) = \frac{1}{2}.
+\end{equation}
+%
+
