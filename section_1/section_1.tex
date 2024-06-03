@@ -83,11 +83,17 @@ T_i &= \sum_{n = 1}^{N} x_n^i t_n.
 
 
 \subsection{}
-Let $a$, $o$ $l$ be the events where an apple, orange and lime are selected respectively.
+Let $a$, $o$ and $l$ be the events where an apple, orange and lime are selected respectively.
 The probability that an apple is selected is given by
 %
 \begin{equation}
-p(a) = \frac{1}{5} \frac{3}{10} + \frac{1}{5} \frac{1}{2} + \frac{3}{5} \frac{3}{10} = \frac{17}{50}.
+p(a) = p(a | r) p(r) + p(a | b) p(b) + p(a | g) p(g).
+\end{equation}
+%
+Substituting $p(a | r) = \frac{3}{10}$, $p(r) = \frac{1}{5}$, $p(a | g) = \frac{1}{2}$, $p(r) = \frac{1}{5}$, $p(a | g) = \frac{3}{10}$ and $p(g) = \frac{3}{5}$ gives
+%
+\begin{equation}
+p(a) = \frac{17}{50}.
 \end{equation}
 %
 
@@ -97,19 +103,19 @@ If an orange is selected, the probability that it came from the geen box is give
 p(g | o) = \frac{p(g, o)}{p(o)}.
 \end{equation}
 %
-Since 
+Here,
 %
 \begin{equation}
 \begin{aligned}
-p(g, o) &= \frac{3}{5} \frac{3}{10} = \frac{9}{50}, \\
-p(o) & = \frac{1}{5} \frac{2}{5} + \frac{1}{5} \frac{1}{2} + \frac{3}{5} \frac{3}{10} = \frac{9}{25},
+p(g, o) &= p(o | g) p(g), \\
+p(o) & = p(o | r) p(r) + p(o | b) p(b) + p(o | g) p(g).
 \end{aligned}
 \end{equation}
 %
-we have
+Substituting $p(o | r) = \frac{2}{5}$, $p(r) = \frac{1}{5}$, $p(o | b) = \frac{1}{2}$, $p(b) = \frac{1}{5}$, $p(o | g) = \frac{3}{10}$ and $p(g) = \frac{3}{5}$ gives $p(g, o) = \frac{9}{50}$ and $p(o) = \frac{9}{25}$.
 %
+Therefore,
 \begin{equation}
 p(g | o) = \frac{1}{2}.
 \end{equation}
-%
 
