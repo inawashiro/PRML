@@ -146,6 +146,7 @@ Therefore,
 
 
 \subsection{}
+\label{subsec_1_6}
 By the definition,
 %
 \begin{equation}
@@ -347,4 +348,58 @@ Setting its derivative to zero gives
 %
 Therefore, the mode is given by $\bm{\mu}$.
 
+
+\subsection{}
+By the definition,
+%
+\begin{equation}
+{\rm E} (x + y) = \int \int (x + y) f(x, y) dx dy.
+\end{equation}
+%
+The right hand side can be written as 
+%
+\begin{equation}
+\int x \left( \int f(x, y) dy \right) dx + \int y \left( \int f(x, y) dx \right) dy = \int x f(x) dx + \int y f(y) dy.
+\end{equation}
+%
+By the definition, the right hand side can be written as 
+%
+\begin{equation}
+{\rm E} x + {\rm E} y.
+\end{equation}
+%
+Therefore, 
+%
+\begin{equation}
+{\rm E} (x + y) = {\rm E} x + {\rm E} y.
+\end{equation}
+%
+
+Similarly, by the definition,
+%
+\begin{equation}
+{\rm var} (x + y) = {\rm E} \left( x + y - {\rm E} (x + y) \right) ^ 2
+\end{equation}
+%
+By the result above and the definition, the right hand side can be written as 
+%
+\begin{equation}
+\begin{aligned}
+{\rm E} \left( x - {\rm E} x \right) ^ 2 + 2 {\rm E} \left( \left( x - {\rm E} x \right) \left( y - {\rm E} y \right) \right) + {\rm E} \left( y - {\rm E} y \right) ^ 2 \\
+= {\rm var} x + 2 {\rm cov} (x, y) + {\rm var} y.
+\end{aligned}
+\end{equation}
+%
+If $x$ and $y$ are independent, then 
+%
+\begin{equation}
+{\rm cov} (x, y) = 0,
+\end{equation}
+%
+by \ref{subsec_1_6}. Therefore,
+%
+\begin{equation}
+{\rm var} (x + y) = {\rm var} x + {\rm var} y.
+\end{equation}
+%
 
