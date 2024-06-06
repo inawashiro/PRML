@@ -445,15 +445,27 @@ Therefore,
 %
 
 
-%\subsection{}
-%If $x_m$ and $x_n$ are samples from the Gaussian distribution with mean $\mu$ and variance $\sigma ^ 2$, then
-%%
-%\begin{equation}
-%{\rm E} x_m x_n
-%\end{equation}
-%%
-
-
+\subsection{}
+If $x_m$ and $x_n$ are independent, then
+%
+\begin{equation}
+{\rm E} x_m x_n = {\rm E} x_m {\rm E} x_n.
+\end{equation}
+%
+If they are samples from the Gaussian distribution with mean $\mu$ and variance $\sigma ^ 2$, the right hand side is given by $\mu ^ 2$.
+On the other hand, by the definition, 
+%
+\begin{equation}
+{\rm E} x_n ^ 2 =  {\rm var} x_n + \left( {\rm E} x_n \right) ^ 2.
+\end{equation}
+%
+If $x_n$ is a sample from the Gaussian distribution with mean $\mu$ and variance $\sigma ^ 2$, the right hand side is given by $\sigma ^ 2 + \mu ^ 2$.
+Therefore,
+%
+\begin{equation}
+{\rm E} x_m x_n = \mu ^ 2 + \delta_{mn} \sigma ^ 2.
+\end{equation}
+%
 
 
 
