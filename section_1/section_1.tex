@@ -8,7 +8,7 @@ To minimise
 E(\mathbf{w}) = \frac{1}{2} \sum_{n = 1}^{N} \left( y(x_n, \mathbf{w}) - t_n \right) ^ 2,
 \end{equation}
 %
-setting its derivative as zero gives
+setting its derivative to zero gives
 %
 \begin{equation}
 \mathbf{0} = \sum_{n = 1}^{N} \frac{\partial y(x_n, \mathbf{w})}{\partial \mathbf{w}} \left( y(x_n, \mathbf{w}) - t_n \right).
@@ -49,7 +49,7 @@ To minimise
 \tilde{E}(\mathbf{w}) = \frac{1}{2} \sum_{n = 1}^{N} \left( y(x_n, \mathbf{w}) - t_n \right) ^ 2 + \frac{\lambda}{2} \lVert \mathbf{w} \rVert ^ 2,
 \end{equation}
 %
-setting its derivative as zero gives
+setting its derivative to zero gives
 %
 \begin{equation}
 \mathbf{0} = \sum_{n = 1}^{N} \frac{\partial y(x_n, \mathbf{w})}{\partial \mathbf{w}} \left( y(x_n, \mathbf{w}) - t_n \right) + \lambda \mathbf{w}.
@@ -325,7 +325,7 @@ By the definition,
 \mathcal{N} \left( x | \mu, \sigma ^ 2 \right) = \left( 2 \pi \sigma ^ 2 \right) ^ {- \frac{1}{2}} \exp \left( - \frac{1}{2 \sigma ^ 2} (x - \mu) ^ 2 \right).
 \end{equation}
 %
-Setting its derivative as zero gives
+Setting its derivative to zero gives
 %
 \begin{equation}
 0 = \left( 2 \pi \sigma ^ 2 \right) ^ {- \frac{1}{2}} \left( - \frac{1}{\sigma ^ 2} (x - \mu) \right) \exp \left( - \frac{1}{2 \sigma ^ 2} (x - \mu) ^ 2 \right).
@@ -339,7 +339,7 @@ Similarly, by the definition,
 \mathcal{N} \left( \mathbf{x} | \bm{\mu}, \bm{\Sigma} \right) = \left( 2 \pi \right) ^ {- \frac{D}{2}} |\bm{\Sigma}| ^ {- \frac{1}{2}} \exp \left( - \frac{1}{2} (\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu}) \right).
 \end{equation}
 %
-Setting its derivative as zero gives
+Setting its derivative to zero gives
 %
 \begin{equation}
 \mathbf{0} = \left( 2 \pi \right) ^ {- \frac{D}{2}} |\bm{\Sigma}| ^ {- \frac{1}{2}} \left( - \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu}) \right) \exp \left( - \frac{1}{2} (\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu}) \right).
