@@ -150,25 +150,31 @@ Therefore,
 By the definition,
 %
 \begin{equation}
-{\rm cov} (x, y) = {\rm E} xy - {\rm E} x {\rm E} y,
+{\rm cov} (x, y) = {\rm E} \left( \left( x - {\rm E} x \right) \left( y - {\rm E} y\right) \right).
 \end{equation}
 %
-where the right hand side can be written as
+The right hand side can be written as
+%
+\begin{equation}
+{\rm E} x y - {\rm E} \left( x {\rm E} y \right) - {\rm E} \left( y {\rm E} x \right) + {\rm E} \left( {\rm E} x {\rm E} y \right) = {\rm E} x y - {\rm E} x {\rm E} y.
+\end{equation}
+%
+The right hand side can be written as
 %
 \begin{equation}
 \int xy f(x, y) dx dy - \int x f(x) dx \int y f(y) dy.
 \end{equation}
 %
-If $x$ and $y$ are independent, by the definition
+If $x$ and $y$ are independent, by the definition,
 %
 \begin{equation}
-f(x, y) = f(x) f(y),
+f(x, y) = f(x) f(y).
 \end{equation}
 %
-then
+Then,
 %
 \begin{equation}
-\int xy f(x, y) dx dy = \int f(x) dx \int f(y) dy.
+\int x y f(x, y) dx dy = \int f(x) dx \int f(y) dy.
 \end{equation}
 %
 Therefore,
