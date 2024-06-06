@@ -409,3 +409,44 @@ by \ref{subsec_1_6}. Therefore,
 \end{equation}
 %
 
+
+\subsection{}
+To maximise 
+%
+\begin{equation}
+\ln p \left( \mathbf{x} | \mu, \sigma ^ 2 \right) = - \frac{N}{2} \ln \left( 2 \pi \sigma ^ 2 \right) - \frac{1}{2 \sigma ^ 2} \sum_{n = 1}^{N} (x_n - \mu) ^ 2
+\end{equation}
+%
+with respect to $\mu$, setting the partial derivative to zero gives
+%
+\begin{equation}
+0 = \frac{1}{\sigma ^ 2} \sum_{n = 1}^{N} (x_n - \mu).
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+\mu_{\rm ML} = \frac{1}{N} \sum_{n = 1}^{N} x_n.
+\end{equation}
+%
+
+Similarly, to maximise the log likelyhood with respect to $\sigma ^ 2$, setting the partial derivative to zero gives
+%
+\begin{equation}
+0 = - \frac{N}{2 \sigma ^ 2} + \frac{1}{2 \left( \sigma ^ 2 \right) ^ 2} \sum_{n = 1}^{N} (x_n - \mu) ^ 2.
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+\sigma_{\rm ML} ^ 2 = \frac{1}{N} \sum_{n = 1}^{N} (x_n - \mu) ^ 2.
+\end{equation}
+%
+
+
+
+
+
+
+
+
