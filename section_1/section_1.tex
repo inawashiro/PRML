@@ -162,7 +162,7 @@ The right hand side can be written as
 The right hand side can be written as
 %
 \begin{equation}
-\int xy f(x, y) dx dy - \int x f(x) dx \int y f(y) dy.
+\int x y p(x, y) dx dy - \int x p(x) dx \int y p(y) dy.
 \end{equation}
 %
 If $x$ and $y$ are independent, by the definition,
@@ -174,7 +174,7 @@ f(x, y) = f(x) f(y).
 Then,
 %
 \begin{equation}
-\int x y f(x, y) dx dy = \int f(x) dx \int f(y) dy.
+\int x y p(x, y) dx dy = \int p(x) dx \int p(y) dy.
 \end{equation}
 %
 Therefore,
@@ -359,13 +359,13 @@ Therefore, the mode is given by $\bm{\mu}$.
 By the definition,
 %
 \begin{equation}
-{\rm E} (x + y) = \int \int (x + y) f(x, y) dx dy.
+{\rm E} (x + y) = \int \int (x + y) p(x, y) dx dy.
 \end{equation}
 %
 The right hand side can be written as 
 %
 \begin{equation}
-\int x \left( \int f(x, y) dy \right) dx + \int y \left( \int f(x, y) dx \right) dy = \int x f(x) dx + \int y f(y) dy.
+\int x \left( \int p(x, y) dy \right) dx + \int y \left( \int p(x, y) dx \right) dy = \int x p(x) dx + \int y p(y) dy.
 \end{equation}
 %
 By the definition, the right hand side can be written as 
