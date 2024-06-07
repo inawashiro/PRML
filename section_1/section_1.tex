@@ -467,6 +467,88 @@ Therefore,
 \end{equation}
 %
 
+Here, since 
+%
+\begin{equation}
+\mu_{\rm ML} = \frac{1}{N} \sum_{n = 1}^{N} x_n,
+\end{equation}
+%
+we have
+%
+\begin{equation}
+{\rm E} \mu_{\rm ML} = \frac{1}{N} \sum_{n = 1}^{N} {\rm E} x_n.
+\end{equation}
+%
+Therefore, 
+%
+\begin{equation}
+{\rm E} \mu_{\rm ML} = \mu.
+\end{equation}
+%
+Similarly, since 
+%
+\begin{equation}
+\sigma_{\rm ML}^2 = \frac{1}{N} \sum_{n = 1}^{N} \left( x_n - \mu_{\rm ML} \right) ^ 2,
+\end{equation}
+%
+we have 
+%
+\begin{equation}
+{\rm E} \sigma_{\rm ML}^2 = \frac{1}{N} \sum_{n = 1}^{N} {\rm E} \left( x_n - \mu_{\rm ML} \right) ^ 2.
+\end{equation}
+%
+The right hand side can be writen as 
+%
+\begin{equation}
+\frac{1}{N} \sum_{n = 1}^{N} {\rm E} \left( x_n ^ 2 - 2 \mu_{\rm ML} x_n + \mu_{\rm ML} ^ 2 \right) = \frac{1}{N} \sum_{n = 1}^{N} {\rm E} x_n ^ 2 - \frac{2}{N} {\rm E} \left( \mu_{\rm ML} \left( \sum_{n = 1}^{N} x_n \right) \right) + {\rm E} \mu_{\rm ML} ^ 2.
+\end{equation}
+%
+The first term of the right hand side can be written as 
+%
+\begin{equation}
+\frac{1}{N} \sum_{n = 1}^{N} \left( \mu ^ 2 + \sigma ^ 2 \right) = \mu ^ 2 + \sigma ^ 2,
+\end{equation}
+%
+while the second and third terms can be writen as
+%
+\begin{equation}
+- 2 {\rm E} \mu_{\rm ML} ^ 2 + {\rm E} \mu_{\rm ML} ^ 2 = - {\rm E} \mu_{\rm ML} ^ 2.
+\end{equation}
+%
+Here, 
+%
+\begin{equation}
+{\rm E} \mu_{\rm ML} ^ 2 = {\rm E} \left( \frac{1}{N} \sum_{n = 1}^{N} x_n \right) ^ 2.
+\end{equation}
+%
+The right hand side can be written as 
+%
+\begin{equation}
+\frac{1}{N ^ 2} \sum_{n = 1}^{N} {\rm E} x_n ^ 2 + \frac{2}{N ^ 2} \sum_{1 \leq m < n \leq N} {\rm E} x_m x_n = \frac{1}{N} (\mu ^ 2 + \sigma ^ 2) + \frac{N - 1}{N} \mu ^ 2.
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+{\rm E} \mu_{\rm ML} ^ 2 = \mu ^ 2 + \frac{1}{N} \sigma ^ 2.
+\end{equation}
+%
+Thus,
+%
+\begin{equation}
+{\rm E} \sigma_{\rm ML}^2 = \frac{N - 1}{N} \sigma ^ 2.
+\end{equation}
+%
+
+
+
+
+
+
+
+
+
+
 
 
 
