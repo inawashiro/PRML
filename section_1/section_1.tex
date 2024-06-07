@@ -567,7 +567,48 @@ Therefore,
 %
 
 
+\subsection{}
+Let
+%
+\begin{equation}
+\begin{aligned}
+w_{ij}^{\rm S} &= \frac{1}{2} (w_{ij} + w_{ji}), \\
+w_{ij}^{\rm A} &= \frac{1}{2} (w_{ij} - w_{ji}).
+\end{aligned}
+\end{equation}
+%
+Then
+%
+\begin{equation}
+\begin{aligned}
+w_{ij} &= w_{ij}^{\rm S} + w_{ij}^{\rm A}, \\
+w_{ij}^{\rm S} &= w_{ji}^{\rm S}, \\
+w_{ij}^{\rm A} &= - w_{ji}^{\rm A}.
+\end{aligned}
+\end{equation}
+%
 
+Therefore,
+%
+\begin{equation}
+\sum_{i = 1}^{D} \sum_{j = 1}^{D} w_{ij} x_i x_j = \sum_{i = 1}^{D} \sum_{j = 1}^{D} \left( w_{ij}^{\rm S} + w_{ij}^{\rm A} \right) x_i x_j.
+\end{equation}
+%
+The right hand side can be written as
+%
+\begin{equation}
+\sum_{i = 1}^{D} \sum_{j = 1}^{D} w_{ij}^{\rm S} x_i x_j + \sum_{i = 1}^{D} \sum_{j = 1}^{D} w_{ij}^{\rm A} x_i x_j = \sum_{i = 1}^{D} \sum_{j = 1}^{D} w_{ij}^{\rm S} x_i x_j,
+\end{equation}
+%
+where
+%
+\begin{equation}
+\sum_{i = 1}^{D} \sum_{j = 1}^{D} w_{ij}^{\rm A} x_i x_j = 0,
+\end{equation}
+%
+clear from the definition, is used.
+
+Finally, it is also clear from the definition that the number of independent parameters in the matrix $w_{ij}^{\rm S}$ is $\frac{D (D + 1)}{2}$.
 
 
 
