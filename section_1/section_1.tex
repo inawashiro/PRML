@@ -587,8 +587,25 @@ w_{ij}^{\rm A} &= - w_{ji}^{\rm A}.
 \end{aligned}
 \end{equation}
 %
+Here,
+\begin{equation}
+\sum_{i = 1}^{D} \sum_{j = 1}^{D} w_{ij}^{\rm A} x_i x_j = \frac{1}{2} \sum_{i = 1}^{D} \sum_{j = 1}^{D} (w_{ij} - w_{ji}) x_i x_j.
+\end{equation}
+%
+The right hand side can be written as
+%
+\begin{equation}
+\frac{1}{2} \left( \sum_{i = 1}^{D} \sum_{j = 1}^{D} w_{ij} x_i x_j - \sum_{i = 1}^{D} \sum_{j = 1}^{D} w_{ji} x_i x_j \right) = 0.
+\end{equation}
+%
+Therefore, 
+%
+\begin{equation}
+\sum_{i = 1}^{D} \sum_{j = 1}^{D} w_{ij}^{\rm A} x_i x_j = 0.
+\end{equation}
+%
 
-Therefore,
+Additionally,
 %
 \begin{equation}
 \sum_{i = 1}^{D} \sum_{j = 1}^{D} w_{ij} x_i x_j = \sum_{i = 1}^{D} \sum_{j = 1}^{D} \left( w_{ij}^{\rm S} + w_{ij}^{\rm A} \right) x_i x_j.
@@ -600,15 +617,15 @@ The right hand side can be written as
 \sum_{i = 1}^{D} \sum_{j = 1}^{D} w_{ij}^{\rm S} x_i x_j + \sum_{i = 1}^{D} \sum_{j = 1}^{D} w_{ij}^{\rm A} x_i x_j = \sum_{i = 1}^{D} \sum_{j = 1}^{D} w_{ij}^{\rm S} x_i x_j,
 \end{equation}
 %
-where
+where the result above is used. 
+Therefore,
 %
 \begin{equation}
-\sum_{i = 1}^{D} \sum_{j = 1}^{D} w_{ij}^{\rm A} x_i x_j = 0,
+\sum_{i = 1}^{D} \sum_{j = 1}^{D} w_{ij} x_i x_j = \sum_{i = 1}^{D} \sum_{j = 1}^{D} w_{ij}^{\rm S} x_i x_j.
 \end{equation}
 %
-which is clear from the definition, is used.
 
-Finally, it is also clear from the definition that the number of independent parameters in the matrix $w_{ij}^{\rm S}$ is $\frac{D (D + 1)}{2}$.
+Finally, since the matrix $w_{ij}^{\rm S}$ is $D \times D$ symmetric matrix, its number of independent parameters is $\frac{D (D + 1)}{2}$.
 
 
 
