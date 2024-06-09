@@ -869,17 +869,47 @@ Finally, the ratio of the distance from the center of the cube to one of the cor
 Therefore, the ration goes to $\infty$ as $D \to \infty$.
 
 
-%\subsection{}
-%Integrating both sides of
-%%
-%\begin{equation}
-%p(\mathbf{x}) = (2 \pi \sigma ^ 2) ^ {- \frac{D}{2}} \exp \left( - \frac{\norm{x} ^ 2}{2 \sigma ^2} \right).
-%\end{equation}
-%%
+\subsection{}
+Integrating both sides of a Gaussian distributino in $D$ dimensions
+%
+\begin{equation}
+p(\mathbf{x}) = (2 \pi \sigma ^ 2) ^ {- \frac{D}{2}} \exp \left( - \frac{\norm{\mathbf{x}} ^ 2}{2 \sigma ^2} \right)
+\end{equation}
+%
+from $\norm{\mathbf{x}} = r$ to $\norm{\mathbf{x}} = r + \epsilon$ gives
+%
+\begin{equation}
+\int_{r \leq \norm{\mathbf{x}} \leq r + \epsilon} p(\mathbf{x}) d\mathbf{x} = \int_{r}^{r + \epsilon} \int (2 \pi \sigma ^ 2) ^ {- \frac{D}{2}} \exp \left( - \frac{{r'} ^ 2}{2 \sigma ^2} \right) J dr' d\bm{\phi},
+\end{equation}
+%
+where $\bm{\phi}$ is the polar corrdinate and $J$ is the Jacobian of the transformation from Cartesian to polar coordinate.
+For a sufficiently small $\epsilon$, the integrand is constant in terms of $\phi$. 
+Therefore, the right hand side can be written as $p(r) \epsilon$.
+Since 
+%
+\begin{equation}
+\int J d\phi = S_D r ^ {D - 1},
+\end{equation}
+%
+we have
+%
+\begin{equation}
+p(r) = (2 \pi \sigma ^ 2) ^ {- \frac{D}{2}} S_D r ^ {D - 1} \exp \left( - \frac{r ^ 2}{2 \sigma ^2} \right),
+\end{equation}
+%
 
-
-
-
+Additionally, to maximise $p(r)$, setting the derivative to zero gives
+%
+\begin{equation}
+0 = (2 \pi \sigma ^ 2) ^ {- \frac{D}{2}} S_D \left( (D - 1) r ^ {D - 2} - \frac{r ^ D}{\sigma ^ 2} \right) \exp \left( - \frac{r ^ 2}{2 \sigma ^2} \right).
+\end{equation}
+%
+Therefore, $p(r)$ is maximised at a sigle stationary point
+%
+\begin{equation}
+\hat{r} = \sqrt{D - 1} \sigma.
+\end{equation}
+%
 
 
 
