@@ -121,7 +121,52 @@ p(g | o) = \frac{1}{2}.
 \end{equation}
 
 
-\stepcounter{subsection}
+\subsection{}
+Let 
+%
+\begin{equation}
+x = g(y)
+\end{equation}
+%
+and $\hat{x}$ and $\hat{y}$ be the locations of the maximum of $p_x(x)$ and $p_y(y)$ respcetively.
+Let us assume that there exists $\epsilon > 0$ such that $g'(y) \neq 0$ for $\left| y - \hat{y} \right| < \epsilon$.
+Then, differentiating both sides of the transoformation
+%
+\begin{equation}
+p_y(y) = p_x \left( g(y) \right) \left| g'(y) \right|
+\end{equation}
+%
+and substituting $y = \hat{y}$ gives
+%
+\begin{equation}
+0 = g'(\hat{y}) p_x' \left( g \left( \hat{y} \right) \right) + p_x \left( g \left( \hat{y} \right) \right) g'' \left( \hat{y} \right).
+\end{equation}
+%
+Therefore, in general,
+%
+\begin{equation}
+\hat{x} \neq g \left( \hat{y} \right).
+\end{equation}
+%
+
+Here, let us assume that 
+%
+\begin{equation}
+g(y) = a y + b.
+\end{equation}
+%
+Then, differentiating both sides of the transformation and substituting $y = \hat{y}$ gives
+%
+\begin{equation}
+0 = p_x' \left( g \left( \hat{y} \right) \right).
+\end{equation}
+%
+Therefore, 
+%
+\begin{equation}
+\hat{x} = g \left( \hat{y} \right).
+\end{equation}
+%
 
 
 \subsection{}
@@ -822,6 +867,9 @@ Finally, the ratio of the distance from the center of the cube to one of the cor
 \end{equation}
 %
 Therefore, the ration goes to $\infty$ as $D \to \infty$.
+
+
+\subsection{}
 
 
 
