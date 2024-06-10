@@ -882,21 +882,29 @@ from $\norm{\mathbf{x}} = r$ to $\norm{\mathbf{x}} = r + \epsilon$ gives
 \int_{r \leq \norm{\mathbf{x}} \leq r + \epsilon} p(\mathbf{x}) d\mathbf{x} = \int_{r}^{r + \epsilon} \int (2 \pi \sigma ^ 2) ^ {- \frac{D}{2}} \exp \left( - \frac{{r'} ^ 2}{2 \sigma ^2} \right) J dr' d\bm{\phi},
 \end{equation}
 %
-where $\bm{\phi}$ is the polar corrdinate and $J$ is the Jacobian of the transformation from Cartesian to polar coordinate.
-For a sufficiently small $\epsilon$, the integrand is constant in terms of $\phi$. 
-Therefore, the right hand side can be written as $p(r) \epsilon$.
-Since 
+where $\bm{\phi}$ is the vector of the angular components of the polar corrdinate and $J$ is the Jacobian of the transformation from the Cartesian to polar coordinate.
+For a sufficiently small $\epsilon$, the right hand side can be approximated as
 %
 \begin{equation}
-\int J d\phi = S_D r ^ {D - 1},
+\begin{aligned}
+(2 \pi \sigma ^ 2) ^ {- \frac{D}{2}} \exp \left( - \frac{r ^ 2}{2 \sigma ^2} \right) \int_{r}^{r + \epsilon} \int J dr' d\bm{\phi} \\
+= (2 \pi \sigma ^ 2) ^ {- \frac{D}{2}} \exp \left( - \frac{r ^ 2}{2 \sigma ^2} \right) \int_{r \leq \norm{\mathbf{x}} \leq r + \epsilon} d\mathbf{x}.
+\end{aligned}
 \end{equation}
 %
-we have
+Therefore,
+%
+\begin{equation}
+\int_{r \leq \norm{\mathbf{x}} \leq r + \epsilon} p(\mathbf{x}) d\mathbf{x} \simeq p(r) \epsilon,
+\end{equation}
+%
+where
 %
 \begin{equation}
 p(r) = (2 \pi \sigma ^ 2) ^ {- \frac{D}{2}} S_D r ^ {D - 1} \exp \left( - \frac{r ^ 2}{2 \sigma ^2} \right),
 \end{equation}
 %
+and $S_D$ is the surface area of a unit sphere in $D$ dimensions.
 
 Additionally, to maximise $p(r)$, setting the derivative to zero gives
 %
