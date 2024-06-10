@@ -906,7 +906,7 @@ p(r) = (2 \pi \sigma ^ 2) ^ {- \frac{D}{2}} S_D r ^ {D - 1} \exp \left( - \frac{
 %
 and $S_D$ is the surface area of a unit sphere in $D$ dimensions.
 
-Additionally, to maximise $p(r)$, setting the derivative to zero gives
+Secondly, to maximise $p(r)$, setting the derivative to zero gives
 %
 \begin{equation}
 0 = (2 \pi \sigma ^ 2) ^ {- \frac{D}{2}} S_D \left( (D - 1) r ^ {D - 2} - \frac{r ^ D}{\sigma ^ 2} \right) \exp \left( - \frac{r ^ 2}{2 \sigma ^2} \right).
@@ -919,9 +919,44 @@ Therefore, $p(r)$ is maximised at a sigle stationary point
 \end{equation}
 %
 
+Thirdly, by the expression of $p(r)$ above,
+%
+\begin{equation}
+\frac{p \left( \hat{r} + \epsilon \right)}{p \left( \hat{r} \right)} = \left( \frac{\hat{r} + \epsilon}{\hat{r}} \right) ^ {D - 1} \exp \left( - \frac{2 \hat{r} \epsilon + \epsilon ^ 2}{2 \sigma ^ 2} \right).
+\end{equation}
+%
+Substituting the expression of $\hat{r}$ above, the right hand side can be written as
+%
+\begin{equation}
+\left( 1 + \frac{\epsilon}{\sqrt{D - 1} \sigma} \right) ^ {D - 1} \exp \left( - \frac{\sqrt{D - 1} \epsilon}{\sigma} - \frac{\epsilon ^ 2}{2 \sigma ^ 2} \right).
+\end{equation}
+%
+For a sufficiently small $\epsilon$, it can be approximated as
+%
+\begin{equation}
+\exp \left( \frac{\sqrt{D - 1} \epsilon}{\sigma} \right) \exp \left( - \frac{\sqrt{D - 1} \epsilon}{\sigma} - \frac{\epsilon ^ 2}{2 \sigma ^ 2} \right) = \exp \left( - \frac{\epsilon ^ 2}{2 \sigma ^ 2} \right).
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+p \left( \hat{r} + \epsilon \right) \simeq p \left( \hat{r} \right) \exp \left( - \frac{\epsilon ^ 2}{2 \sigma ^ 2} \right).
+\end{equation}
+%
 
-
-
+Finally, let a vector of length $\hat{r}$ be $\hat{\mathbf{r}}$.
+Then, by the definition of $p(\mathbf{x})$,
+%
+\begin{equation}
+\frac{p(\mathbf{0})}{p \left( \hat{\mathbf{r}} \right)} = \exp \left( \frac{\hat{r} ^ 2}{2 \sigma ^2} \right).
+\end{equation}
+%
+Substituting the expression of $\hat{r}$ above, the right hand side can be written as $\exp \left( \frac{D - 1}{2} \right)$.
+%
+\begin{equation}
+\frac{p(\mathbf{0})}{p \left( \hat{\mathbf{r}} \right)} = \exp \left( \frac{D - 1}{2} \right).
+\end{equation}
+%
 
 
 
