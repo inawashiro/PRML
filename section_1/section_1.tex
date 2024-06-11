@@ -925,22 +925,31 @@ Thirdly, by the expression of $p(r)$ above,
 \frac{p \left( \hat{r} + \epsilon \right)}{p \left( \hat{r} \right)} = \left( \frac{\hat{r} + \epsilon}{\hat{r}} \right) ^ {D - 1} \exp \left( - \frac{2 \hat{r} \epsilon + \epsilon ^ 2}{2 \sigma ^ 2} \right).
 \end{equation}
 %
-Substituting the expression of $\hat{r}$ above, the right hand side can be written as
+Using the expression of $\hat{r}$ above, the right hand side can be written as
 %
 \begin{equation}
-\left( 1 + \frac{\epsilon}{\sqrt{D - 1} \sigma} \right) ^ {D - 1} \exp \left( - \frac{\sqrt{D - 1} \epsilon}{\sigma} - \frac{\epsilon ^ 2}{2 \sigma ^ 2} \right).
+\begin{aligned}
+\exp \left( (D - 1) \ln \left( 1 + \frac{\epsilon}{\hat{r}} \right) - \frac{2 \hat{r} \epsilon + \epsilon ^ 2}{2 \sigma ^ 2} \right) \\
+= \exp \left( \frac{\hat{r} ^ 2}{\sigma ^ 2} \ln \left( 1 + \frac{\epsilon}{\hat{r}} \right) - \frac{2 \hat{r} \epsilon + \epsilon ^ 2}{2 \sigma ^ 2} \right).
+\end{aligned}
 \end{equation}
 %
-For a sufficiently small $\epsilon$, it can be approximated as
+By the Taylor series
 %
 \begin{equation}
-\exp \left( \frac{\sqrt{D - 1} \epsilon}{\sigma} \right) \exp \left( - \frac{\sqrt{D - 1} \epsilon}{\sigma} - \frac{\epsilon ^ 2}{2 \sigma ^ 2} \right) = \exp \left( - \frac{\epsilon ^ 2}{2 \sigma ^ 2} \right).
+\ln (1 + x) = x - \frac{1}{2} x ^ 2 + o \left( x ^ 3 \right),
+\end{equation}
+%
+the right hand side can be approximated as
+%
+\begin{equation}
+\exp \left( \frac{\hat{r} ^ 2}{\sigma ^ 2} \left( \frac{\epsilon}{\hat{r}} - \frac{\epsilon ^ 2}{2 {\hat{r}} ^ 2} \right) - \frac{2 \hat{r} \epsilon + \epsilon ^ 2}{2 \sigma ^ 2} \right) = \exp \left( - \frac{\epsilon ^ 2}{\sigma ^ 2} \right).
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-p \left( \hat{r} + \epsilon \right) \simeq p \left( \hat{r} \right) \exp \left( - \frac{\epsilon ^ 2}{2 \sigma ^ 2} \right).
+p \left( \hat{r} + \epsilon \right) \simeq p \left( \hat{r} \right) \exp \left( - \frac{\epsilon ^ 2}{\sigma ^ 2} \right).
 \end{equation}
 %
 
@@ -958,7 +967,6 @@ Therefore,
 \frac{p(\mathbf{0})}{p \left( \hat{\mathbf{r}} \right)} = \exp \left( \frac{D - 1}{2} \right).
 \end{equation}
 %
-
 
 
 
