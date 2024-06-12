@@ -1051,10 +1051,26 @@ Therefore,
 Thus, minimising the average loss reduces to choosing the criterion to have the largest posterior probatility.
 
 
-
-
-
-
+\subsection{}
+The average loss is given by
+%
+\begin{equation}
+{\rm E} L = \sum_{k} \sum_{j} \int_{\mathcal{R}_j} L_{kj} p(\mathbf{x}, \mathcal{C}_k) d\mathbf{x}.
+\end{equation}
+%
+The right hand side can be written as
+%
+\begin{equation}
+\sum_{j} \int_{\mathcal{R}_j} \sum_{k} L_{kj} p(\mathbf{x}, \mathcal{C}_k) d\mathbf{x} = \sum_{j} \int_{\mathcal{R}_j} \left( \sum_{k} L_{kj} p(\mathcal{C}_k | \mathbf{x}) \right) p(\mathbf{x}) d\mathbf{x}.
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+{\rm E} L = \sum_{j} \int_{\mathcal{R}_j} \left( \sum_{k} L_{kj} p(\mathcal{C}_k | \mathbf{x}) \right) p(\mathbf{x}) d\mathbf{x}.
+\end{equation}
+%
+Thus, mimising the average loss reduces to choosing the minimum $\sum_{k} L_{kj} p(\mathcal{C}_k | \mathbf{x})$.
 
 
 
