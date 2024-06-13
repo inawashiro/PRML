@@ -1073,12 +1073,59 @@ Therefore,
 Thus, mimising the average loss reduces to choosing to minimise $\sum_{k} L_{kj} p(\mathcal{C}_k | \mathbf{x})$.
 
 
+\stepcounter{subsection}
 
 
+\subsection{}
+Let
+%
+\begin{equation}
+{\rm E} L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right) = \int \int \lVert \mathbf{y}(\mathbf{x}) - \mathbf{t} \rVert ^ 2 p(\mathbf{x}, \mathbf{t}) d\mathbf{x} d\mathbf{t}.
+\end{equation}
+%
+Then
+%
+\begin{equation}
+\delta {\rm E} L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right) = \int \int \left( \lVert \mathbf{y} (\mathbf{x}) + \delta \mathbf{y}(\mathbf{x}) - \mathbf{t} \rVert ^ 2 - \lVert \mathbf{y}(\mathbf{x}) - \mathbf{t} \rVert ^ 2 \right) p(\mathbf{x}, \mathbf{t}) d\mathbf{x} d\mathbf{t}.
+\end{equation}
+%
+The right hand side can be written as
+%
+\begin{equation}
+\int \int \left( 2 \left( \delta \mathbf{y}(\mathbf{x}) \right) ^ \intercal \left( \mathbf{y}(\mathbf{x}) - \mathbf{t} \right) + \left( \delta \mathbf{y}(\mathbf{x}) \right) ^ \intercal \delta \mathbf{y} (\mathbf{x}) \right) p(\mathbf{x}, \mathbf{t}) d\mathbf{x} d\mathbf{t}.
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+\frac{\delta {\rm E} L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right)}{\delta \mathbf{y} (\mathbf{x})} = 2 \int \left( \mathbf{y} (\mathbf{x}) - \mathbf{t} + \delta \mathbf{y}(\mathbf{x}) \right) p(\mathbf{x}, \mathbf{t}) d\mathbf{t}.
+\end{equation}
+%
+To minimise ${\rm E} L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right)$, setting the left hand side to zero and assuming that $\delta \mathbf{y} (\mathbf{x})$ is sufficiently small gives
+%
+\begin{equation}
+\mathbf{0} = \int \left( \mathbf{y}(\mathbf{x}) - \mathbf{t} \right) p(\mathbf{x}, \mathbf{t}) d\mathbf{t}.
+\end{equation}
+%
+The right hand side can be written as
+%
+\begin{equation}
+\mathbf{y}(\mathbf{x}) \int p(\mathbf{x}, \mathbf{t}) d\mathbf{t} - \int \mathbf{t} p(\mathbf{x}, \mathbf{t}) d\mathbf{t} = p(\mathbf{x}) \left( \mathbf{y}(\mathbf{x}) - \int \mathbf{t} p(\mathbf{t} | \mathbf{x}) d\mathbf{t} \right).
+\end{equation}
+%
+Thus,
+%
+\begin{equation}
+\mathbf{y}(\mathbf{x}) = {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}).
+\end{equation}
+%
 
-
-
-
+Finally, for a single target variable $t$, it reduces to 
+%
+\begin{equation}
+\mathbf{y}(\mathbf{x}) = {\rm E}_t (t | \mathbf{x}).
+\end{equation}
+%
 
 
 
