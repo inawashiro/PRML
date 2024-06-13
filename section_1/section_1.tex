@@ -1018,7 +1018,7 @@ Therefore,
 
 
 \subsection{}
-The average loss is given by
+Let
 %
 \begin{equation}
 {\rm E} L = \sum_{k} \sum_{j} \int_{\mathcal{R}_j} L_{kj} p(\mathbf{x}, \mathcal{C}_k) d\mathbf{x}.
@@ -1048,11 +1048,11 @@ Therefore,
 {\rm E} L = 1 - \sum_{j} \int_{\mathcal{R}_j} p(\mathcal{C}_j | \mathbf{x}) p(\mathbf{x}) d\mathbf{x}.
 \end{equation}
 %
-Thus, minimising the average loss reduces to choosing the criterion to maximise the posterior probatility $p(\mathcal{C}_j | \mathbf{x})$.
+Thus, minimising ${\rm E} L$ reduces to choosing the criterion to maximise the posterior probatility $p(\mathcal{C}_j | \mathbf{x})$.
 
 
 \subsection{}
-The average loss is given by
+Let
 %
 \begin{equation}
 {\rm E} L = \sum_{k} \sum_{j} \int_{\mathcal{R}_j} L_{kj} p(\mathbf{x}, \mathcal{C}_k) d\mathbf{x}.
@@ -1070,7 +1070,7 @@ Therefore,
 {\rm E} L = \sum_{j} \int_{\mathcal{R}_j} \left( \sum_{k} L_{kj} p(\mathcal{C}_k | \mathbf{x}) \right) p(\mathbf{x}) d\mathbf{x}.
 \end{equation}
 %
-Thus, mimising the average loss reduces to choosing to minimise $\sum_{k} L_{kj} p(\mathcal{C}_k | \mathbf{x})$.
+Thus, mimising ${\rm E} L$ reduces to choosing to minimise $\sum_{k} L_{kj} p(\mathcal{C}_k | \mathbf{x})$.
 
 
 \stepcounter{subsection}
