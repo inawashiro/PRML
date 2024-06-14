@@ -1128,10 +1128,65 @@ Finally, for a single target variable $t$, it reduces to
 %
 
 
-
-
-
-
+\subsection{}
+Let
+%
+\begin{equation}
+{\rm E} L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right) = \int \int \lVert \mathbf{y}(\mathbf{x}) - \mathbf{t} \rVert ^ 2 p(\mathbf{x}, \mathbf{t}) d\mathbf{x} d\mathbf{t}.
+\end{equation}
+%
+The right hand side can be written as
+%
+\begin{equation}
+\begin{aligned}
+\int \int \lVert \mathbf{y}(\mathbf{x}) - {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}) + {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}) - \mathbf{t} \rVert ^ 2 p(\mathbf{x}, \mathbf{t}) d\mathbf{x} d\mathbf{t} \\ 
+= \int \int \lVert \mathbf{y}(\mathbf{x}) - {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}) \rVert ^ 2 p(\mathbf{x}, \mathbf{t}) d\mathbf{x} d\mathbf{t} \\
++ 2 \int \int \left( \mathbf{y}(\mathbf{x}) - {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}) \right) ^ \intercal \left( {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}) - \mathbf{t} \right) p(\mathbf{x}, \mathbf{t}) d\mathbf{x} d\mathbf{t} \\
++ \int \int \lVert {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}) - \mathbf{t} \rVert ^ 2 p(\mathbf{x}, \mathbf{t}) d\mathbf{x} d\mathbf{t}.
+\end{aligned}
+\end{equation}
+%
+Let us look at each term of the right hand side.
+The first term can be written as
+%
+\begin{equation}
+\int \lVert \mathbf{y}(\mathbf{x}) - {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}) \rVert ^ 2 \left( \int p(\mathbf{x}, \mathbf{t}) d\mathbf{t} \right) d\mathbf{x} = \int \lVert \mathbf{y}(\mathbf{x}) - {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}) \rVert ^ 2 p(\mathbf{x}) d\mathbf{x}.
+\end{equation}
+%
+Additionally, the second term can be written as
+%
+\begin{equation}
+2 \int \left( \mathbf{y}(\mathbf{x}) - {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}) \right) ^ \intercal \left( \int \left( {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}) - \mathbf{t} \right) p(\mathbf{t} | \mathbf{x}) d\mathbf{t} \right) p(\mathbf{x}) d\mathbf{x}.
+\end{equation}
+%
+Since
+%
+\begin{equation}
+\begin{aligned}
+\int {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}) p(\mathbf{t} | \mathbf{x}) d\mathbf{t} &= {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}) \frac{\int p(\mathbf{x}, \mathbf{t}) d\mathbf{t}}{p(\mathbf{x})}, \\
+\int \mathbf{t} p(\mathbf{t} | \mathbf{x}) d\mathbf{t} &= {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}),
+\end{aligned}
+\end{equation}
+%
+the second term is zero.
+Finally, the third term can be written as
+%
+\begin{equation}
+\int \left( \int \lVert {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}) - \mathbf{t} \rVert ^ 2 p(\mathbf{t} | \mathbf{x}) d\mathbf{t} \right) p(\mathbf{x}) d\mathbf{x} = \int {\rm var}_{\mathbf{t}} (\mathbf{t} | \mathbf{x}) p(\mathbf{x}) d\mathbf{x}.
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+{\rm E} L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right) = \int \lVert \mathbf{y}(\mathbf{x}) - {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}) \rVert ^ 2 p(\mathbf{x}) d\mathbf{x} + \int {\rm var}_{\mathbf{t}} (\mathbf{t} | \mathbf{x}) p(\mathbf{x}) d\mathbf{x}.
+\end{equation}
+%
+Thus, ${\rm E} L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right)$ is mimimised if
+%
+\begin{equation}
+\mathbf{y} (\mathbf{x}) = {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}).
+\end{equation}
+%.
 
 
 
