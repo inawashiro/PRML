@@ -1086,31 +1086,19 @@ Let
 Then
 %
 \begin{equation}
-\delta {\rm E} L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right) = \int \int \left( \lVert \mathbf{y} (\mathbf{x}) + \delta \mathbf{y}(\mathbf{x}) - \mathbf{t} \rVert ^ 2 - \lVert \mathbf{y}(\mathbf{x}) - \mathbf{t} \rVert ^ 2 \right) p(\mathbf{x}, \mathbf{t}) d\mathbf{x} d\mathbf{t}.
+\frac{\delta {\rm E} L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right)}{\delta \mathbf{y} (\mathbf{x})} = 2 \int \left( \mathbf{y} (\mathbf{x}) - \mathbf{t} \right) p(\mathbf{x}, \mathbf{t}) d\mathbf{t}.
+\end{equation}
+%
+To minimise ${\rm E} L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right)$, setting the left hand side to zero gives
+%
+\begin{equation}
+\mathbf{0} = \int \left( \mathbf{y}(\mathbf{x}) - \mathbf{t} \right) p(\mathbf{t} | \mathbf{x}) d\mathbf{t}.
 \end{equation}
 %
 The right hand side can be written as
 %
 \begin{equation}
-\int \int \left( 2 \left( \delta \mathbf{y}(\mathbf{x}) \right) ^ \intercal \left( \mathbf{y}(\mathbf{x}) - \mathbf{t} \right) + \left( \delta \mathbf{y}(\mathbf{x}) \right) ^ \intercal \delta \mathbf{y} (\mathbf{x}) \right) p(\mathbf{x}, \mathbf{t}) d\mathbf{x} d\mathbf{t}.
-\end{equation}
-%
-Therefore,
-%
-\begin{equation}
-\frac{\delta {\rm E} L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right)}{\delta \mathbf{y} (\mathbf{x})} = 2 \int \left( \mathbf{y} (\mathbf{x}) - \mathbf{t} + \delta \mathbf{y}(\mathbf{x}) \right) p(\mathbf{x}, \mathbf{t}) d\mathbf{t}.
-\end{equation}
-%
-To minimise ${\rm E} L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right)$, setting the left hand side to zero and assuming that $\delta \mathbf{y} (\mathbf{x})$ is sufficiently small gives
-%
-\begin{equation}
-\mathbf{0} = \int \left( \mathbf{y}(\mathbf{x}) - \mathbf{t} \right) p(\mathbf{x}, \mathbf{t}) d\mathbf{t}.
-\end{equation}
-%
-The right hand side can be written as
-%
-\begin{equation}
-\mathbf{y}(\mathbf{x}) \int p(\mathbf{x}, \mathbf{t}) d\mathbf{t} - \int \mathbf{t} p(\mathbf{x}, \mathbf{t}) d\mathbf{t} = p(\mathbf{x}) \left( \mathbf{y}(\mathbf{x}) - \int \mathbf{t} p(\mathbf{t} | \mathbf{x}) d\mathbf{t} \right).
+\mathbf{y}(\mathbf{x}) \int p(\mathbf{t} | \mathbf{x}) d\mathbf{t} - \int \mathbf{t} p(\mathbf{t} | \mathbf{x}) d\mathbf{t} = \mathbf{y}(\mathbf{x}) - {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}).
 \end{equation}
 %
 Thus,
@@ -1199,7 +1187,7 @@ Let
 Then
 %
 \begin{equation}
-\frac{\partial {\rm E} L_q}{\partial y (\mathbf{x})} = \int q \abs{y(\mathbf{x}) - t} ^ {q - 1} {\rm sign} (y(\mathbf{x}) - t) p(\mathbf{x}, t) dt.
+\frac{\delta {\rm E} L_q}{\delta y (\mathbf{x})} = \int q \abs{y(\mathbf{x}) - t} ^ {q - 1} {\rm sign} (y(\mathbf{x}) - t) p(\mathbf{x}, t) dt.
 \end{equation}
 %
 To minimise ${\rm E} L_q$, setting the left hand side to zero gives
@@ -1217,9 +1205,6 @@ If $q = 1$, the condition can be written as
 \end{equation}
 %
 Therefore, $y(\mathbf{x})$ is given by the conditional median.
-
-
-
 
 
 
