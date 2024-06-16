@@ -1199,7 +1199,7 @@ Let
 Then
 %
 \begin{equation}
-\frac{\partial {\rm E} L_q}{\partial y (\mathbf{x})} = \int q \abs{y(\mathbf{x}) - t} ^ {q - 1} {\rm sign} (y(\mathbf{x}) - t) p(t | \mathbf{x}) dt.
+\frac{\partial {\rm E} L_q}{\partial y (\mathbf{x})} = \int q \abs{y(\mathbf{x}) - t} ^ {q - 1} {\rm sign} (y(\mathbf{x}) - t) p(\mathbf{x}, t) dt.
 \end{equation}
 %
 To minimise ${\rm E} L_q$, setting the left hand side to zero gives
@@ -1208,7 +1208,15 @@ To minimise ${\rm E} L_q$, setting the left hand side to zero gives
 0 = \int \abs{y(\mathbf{x}) - t} ^ {q - 1} {\rm sign} (y(\mathbf{x}) - t) p(t | \mathbf{x}) dt.
 \end{equation}
 %
+This is the condition that $y(\mathbf{x})$ must satisfy in order to minimise ${\rm E} L_q$.
 
+If $q = 1$, the condition can be written as
+%
+\begin{equation}
+0 = \int_{y(\mathbf{x})}^{\infty} p(t | \mathbf{x}) dt - \int_{- \infty}^{y(\mathbf{x})} p(t | \mathbf{x}) dt.
+\end{equation}
+%
+Therefore, $y(\mathbf{x})$ is given by the conditional median.
 
 
 
