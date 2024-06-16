@@ -1207,15 +1207,86 @@ If $q = 1$, the condition can be written as
 Therefore, $y(\mathbf{x})$ is given by the conditional median.
 
 
+\subsection{}
+Let us assume that, if 
+%
+\begin{equation}
+p(x, y) = p(x) p(y),
+\end{equation}
+%
+then
+%
+\begin{equation}
+h(x, y) = h(x) + h(y). 
+\end{equation}
+%
+Let $h(p)$ be a function to relate $h$ and $p$.
+Then
+%
+\begin{equation}
+h \left( p ^ 2 \right) = h(p) + h(p).
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+h \left( p ^ 2 \right) = 2 h(p).
+\end{equation}
+%
+Let us assume that, for a positive integer $n$,
+%
+\begin{equation}
+h \left( p ^ n \right) = n h(p).
+\end{equation}
+%
+Then, by the first assumption,
+%
+\begin{equation}
+h \left( p ^ {n + 1} \right) = h \left( p ^ n \right) + h(p).
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+h \left( p ^ {n + 1} \right) = (n + 1) h(p).
+\end{equation}
+%
+Thus, the second assumption is proved by induction on $n$.
 
+Additionally, for positive integers $m$ and $n$, 
+%
+\begin{equation}
+h \left( p ^ n \right) = h \left( p ^ {\frac{n}{m} m} \right).
+\end{equation}
+%
+By the second assumption, the left hand side can be written as $n h(p)$.
+By the first assumption, the right hand side can be written as $m h \left( p ^ \frac{n}{m} \right)$.
+Therefore,
+%
+\begin{equation}
+h \left( p ^ \frac{n}{m} \right) = \frac{n}{m} h(p).
+\end{equation}
+%
 
-
-
-
-
-
-
-
+Finally, by the continuity, for a positive real number $a$,
+%
+\begin{equation}
+h \left( p ^a \right) = a h(p).
+\end{equation}
+%
+Differentiating both sides with respect to $a$ and substituting $a = 1$ gives
+%
+\begin{equation}
+(\ln p) h' (p) = h(p).
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+\int \frac{h'(p)}{h(p)} dp = \int \frac{1}{\ln p} dp + C,
+\end{equation}
+%
+where $C$ is a constant.
 
 
 
