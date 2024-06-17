@@ -2,13 +2,13 @@
 
 
 \subsection{}
-To minimise 
+Let 
 %
 \begin{equation}
-E(\mathbf{w}) = \frac{1}{2} \sum_{n = 1}^{N} \left( y(x_n, \mathbf{w}) - t_n \right) ^ 2,
+E(\mathbf{w}) = \frac{1}{2} \sum_{n = 1}^{N} \left( y(x_n, \mathbf{w}) - t_n \right) ^ 2.
 \end{equation}
 %
-setting its derivative to zero gives
+To minimise it, setting the derivative to zero gives
 %
 \begin{equation}
 \mathbf{0} = \sum_{n = 1}^{N} \frac{\partial y(x_n, \mathbf{w})}{\partial \mathbf{w}} \left( y(x_n, \mathbf{w}) - t_n \right).
@@ -43,13 +43,13 @@ T_i &= \sum_{n = 1}^{N} x_n^i t_n.
 
 
 \subsection{}
-To minimise 
+Let
 %
 \begin{equation}
-\tilde{E}(\mathbf{w}) = \frac{1}{2} \sum_{n = 1}^{N} \left( y(x_n, \mathbf{w}) - t_n \right) ^ 2 + \frac{\lambda}{2} \lVert \mathbf{w} \rVert ^ 2,
+\tilde{E}(\mathbf{w}) = \frac{1}{2} \sum_{n = 1}^{N} \left( y(x_n, \mathbf{w}) - t_n \right) ^ 2 + \frac{\lambda}{2} \lVert \mathbf{w} \rVert ^ 2.
 \end{equation}
 %
-setting its derivative to zero gives
+To minimise it, setting the derivative to zero gives
 %
 \begin{equation}
 \mathbf{0} = \sum_{n = 1}^{N} \frac{\partial y(x_n, \mathbf{w})}{\partial \mathbf{w}} \left( y(x_n, \mathbf{w}) - t_n \right) + \lambda \mathbf{w}.
