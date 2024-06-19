@@ -1367,9 +1367,18 @@ Then, by the definition,
 %
 \begin{equation}
 \begin{aligned}
-{\rm H}(\mathbf{x}) &= - \int \int p(\mathbf{x}, \mathbf{y}) \ln p(\mathbf{x}) d\mathbf{x} d\mathbf{y}, \\
-{\rm H}(\mathbf{y}) &= - \int \int p(\mathbf{x}, \mathbf{y}) \ln p(\mathbf{y}) d\mathbf{x} d\mathbf{y}, \\
+{\rm H}(\mathbf{x}) &= - \int p(\mathbf{x}) \ln p(\mathbf{x}) d\mathbf{x}, \\
+{\rm H}(\mathbf{y}) &= - \int p(\mathbf{y}) \ln p(\mathbf{y}) d\mathbf{y}, \\
 {\rm H}(\mathbf{x}, \mathbf{y}) &= - \int \int p(\mathbf{x}, \mathbf{y}) \ln p(\mathbf{x}, \mathbf{y}) d\mathbf{x} d\mathbf{y}.
+\end{aligned}
+\end{equation}
+%
+Note that
+%
+\begin{equation}
+\begin{aligned}
+{\rm H}(\mathbf{x}) &= - \int \left( \int p(\mathbf{x}, \mathbf{y}) d\mathbf{y} \right) \ln p(\mathbf{x}) d\mathbf{x}, \\
+{\rm H}(\mathbf{y}) &= - \int \left( \int p(\mathbf{x}, \mathbf{y}) d\mathbf{x} \right) \ln p(\mathbf{y}) d\mathbf{y}.
 \end{aligned}
 \end{equation}
 %
@@ -1403,6 +1412,42 @@ Thus,
 {\rm H}(\mathbf{x}, \mathbf{y}) \leq {\rm H}(\mathbf{x}) + {\rm H}(\mathbf{y}).
 \end{equation}
 %
+
+
+%\subsection{}
+%Let $\mathbf{x}$ be a vector of continuous variables and 
+%%
+%\begin{equation}
+%\mathbf{y} = \mathbf{A} \mathbf{x},
+%\end{equation}
+%%
+%where $\mathbf{A}$ is a nonsingular matrix.
+%By the definition, 
+%%
+%\begin{equation}
+%{\rm H}(\mathbf{y}) = - \int p(\mathbf{y}) \ln p(\mathbf{y}) d\mathbf{y}.
+%\end{equation}
+%%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
