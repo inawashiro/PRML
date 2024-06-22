@@ -1510,10 +1510,84 @@ p(y_j | x_i) = \delta_{j j'(i)},
 where $j'(i)$ is unique for each $i$.
 
 
-
-
-
-
+\subsection{}
+Let
+%
+\begin{equation}
+\begin{aligned}
+L(p(x)) = &- \int_{- \infty}^{\infty} p(x) \ln p(x) dx + \lambda_1 \left( \int_{- \infty}^{\infty} p(x) dx - 1 \right) \\
+&+ \lambda_2 \left( \int_{- \infty}^{\infty} x p(x) dx - \mu \right) + \lambda_3 \left( \int_{-\infty}^{\infty} (x - \mu) ^ 2 p(x) dx - \sigma ^ 2 \right).
+\end{aligned}
+\end{equation}
+%
+Then
+%
+\begin{equation}
+\frac{\delta L(p(x))}{\delta p(x)} = \int_{- \infty}^{\infty} \left( - \ln p(x) - 1 + \lambda_1 + \lambda_2 x + \lambda_3 (x - \mu) ^ 2 \right) dx.
+\end{equation}
+%
+Setting the left hand side to zero gives
+%
+\begin{equation}
+p(x) = \exp \left( - 1 + \lambda_1 + \lambda_2 x + \lambda_3 (x - \mu) ^ 2 \right).
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+p(x) = \exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} + \lambda_3 \left( x - \left( \mu - \frac{\lambda_2}{2 \lambda_3} \right) \right) ^ 2 \right).
+\end{equation}
+%
+Substituting it to 
+%
+\begin{equation}
+\begin{aligned}
+\int_{- \infty}^{\infty} p(x) dx &= 1, \\
+\int_{- \infty}^{\infty} x p(x) dx &= \mu, \\
+\int_{- \infty}^{\infty} (x - \mu) ^ 2 p(x) dx &= \sigma ^ 2,
+\end{aligned}
+\end{equation}
+%
+gives
+%
+\begin{equation}
+\begin{aligned}
+\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} \right) \int_{- \infty}^{\infty} \exp \left( \lambda_3 \left( x - \left( \mu - \frac{\lambda_2}{2 \lambda_3} \right) \right) ^ 2 \right) dx &= 1, \\
+\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} \right) \int_{- \infty}^{\infty} x \exp \left( \lambda_3 \left( x - \left( \mu - \frac{\lambda_2}{2 \lambda_3} \right) \right) ^ 2 \right) dx &= \mu, \\
+\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} \right) \int_{- \infty}^{\infty} (x - \mu) ^ 2 \exp \left( \lambda_3 \left( x - \left( \mu - \frac{\lambda_2}{2 \lambda_3} \right) \right) ^ 2 \right) dx &= \sigma ^ 2.
+\end{aligned}
+\end{equation}
+%
+Substituting
+%
+\begin{equation}
+\begin{aligned}
+\int_{- \infty}^{\infty} \exp \left( - x ^ 2 \right) dx &= \Gamma \left( \frac{1}{2} \right), \\
+\int_{- \infty}^{\infty} x \exp \left( - x ^ 2 \right) dx &= 0, \\
+\int_{- \infty}^{\infty} x ^ 2 \exp \left( - x ^ 2 \right) dx &= \Gamma \left( \frac{3}{2} \right),
+\end{aligned}
+\end{equation}
+%
+gives
+%
+\begin{equation}
+\begin{aligned}
+\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} \right) (- \lambda_3) ^ {- \frac{1}{2}} \Gamma \left( \frac{1}{2} \right) &= 1, \\
+\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} \right) \left( \mu - \frac{\lambda_2}{2 \lambda_3} \right) (- \lambda_3) ^ {- \frac{1}{2}} \Gamma \left( \frac{1}{2} \right) &= \mu, \\
+\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} \right) \left( (- \lambda_3) ^ {- \frac{1}{2}} \Gamma \left( \frac{3}{2} \right) + \frac{\lambda_2 ^ 2}{4 \lambda_3 ^2} (- \lambda_3) ^ {- \frac{1}{2}} \Gamma \left( \frac{1}{2} \right) \right) &= \sigma ^ 2.
+\end{aligned}
+\end{equation}
+%
+Thus,
+%
+\begin{equation}
+\begin{aligned}
+\lambda_1 &= 1 - \frac{1}{2} \ln \left( 2 \pi \sigma ^ 2 \right), \\
+\lambda_2 &= 0, \\
+\lambda_3 &= - \frac{1}{2 \sigma ^ 2}.
+\end{aligned}
+\end{equation}
+%
 
 
 
