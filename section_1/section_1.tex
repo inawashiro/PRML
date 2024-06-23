@@ -1558,23 +1558,39 @@ gives
 \end{aligned}
 \end{equation}
 %
-Additionally, taking advantage of 
+By the transformation
+%
+\begin{equation}
+y = \sqrt{- \lambda_3} \left( x - \left( \mu - \frac{\lambda_2}{2 \lambda_3} \right) \right),
+\end{equation}
+%
+they can be written as
 %
 \begin{equation}
 \begin{aligned}
-\int_{- \infty}^{\infty} \exp \left( - x ^ 2 \right) dx &= \Gamma \left( \frac{1}{2} \right), \\
-\int_{- \infty}^{\infty} x \exp \left( - x ^ 2 \right) dx &= 0, \\
-\int_{- \infty}^{\infty} x ^ 2 \exp \left( - x ^ 2 \right) dx &= \Gamma \left( \frac{3}{2} \right),
+\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} \right) \int_{- \infty}^{\infty} \exp \left( - y ^ 2 \right) (- \lambda_3) ^ {- \frac{1}{2}} dy &= 1,\\
+\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} \right) \int_{- \infty}^{\infty} \left( (- \lambda_3) ^ {- \frac{1}{2}} y + \mu - \frac{\lambda_2}{2 \lambda_3} \right) \exp \left( - y ^ 2 \right) (- \lambda_3) ^ {- \frac{1}{2}} dy &= \mu,\\
+\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} \right) \int_{- \infty}^{\infty} \left( (- \lambda_3) ^ {- \frac{1}{2}} y + \mu - \frac{\lambda_2}{2 \lambda_3} \right) ^ 2 \exp \left( - y ^ 2 \right) (- \lambda_3) ^ {- \frac{1}{2}} dy &= \sigma ^ 2.\\
 \end{aligned}
 \end{equation}
 %
-gives
+Since
+%
+\begin{equation}
+\begin{aligned}
+\int_{- \infty}^{\infty} \exp \left( - y ^ 2 \right) dy &= \Gamma \left( \frac{1}{2} \right), \\
+\int_{- \infty}^{\infty} x \exp \left( - y ^ 2 \right) dy &= 0, \\
+\int_{- \infty}^{\infty} x ^ 2 \exp \left( - y ^ 2 \right) dy &= \Gamma \left( \frac{3}{2} \right),
+\end{aligned}
+\end{equation}
+%
+they can be written as
 %
 \begin{equation}
 \begin{aligned}
 \exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} \right) (- \lambda_3) ^ {- \frac{1}{2}} \Gamma \left( \frac{1}{2} \right) &= 1, \\
 \exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} \right) \left( \mu - \frac{\lambda_2}{2 \lambda_3} \right) (- \lambda_3) ^ {- \frac{1}{2}} \Gamma \left( \frac{1}{2} \right) &= \mu, \\
-\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} \right) (- \lambda_3) ^ {- \frac{3}{2}} \left( \Gamma \left( \frac{3}{2} \right) + \frac{\lambda_2 ^ 2}{4 \lambda_3 ^2} \Gamma \left( \frac{1}{2} \right) \right) &= \sigma ^ 2.
+\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} \right) \left( (- \lambda_3) ^ {- \frac{3}{2}} \Gamma \left( \frac{3}{2} \right) + (- \lambda_3) ^ {- \frac{1}{2}} \left( \mu - \frac{\lambda_2}{2 \lambda_3} \right) ^ 2 \Gamma \left( \frac{1}{2} \right) \right) &= \sigma ^ 2.
 \end{aligned}
 \end{equation}
 %
@@ -1591,7 +1607,7 @@ Thus,
 so that
 %
 \begin{equation}
-p(x) = \left( 2 \pi \sigma ^ 2 \right) \exp \left( - \frac{1}{2 \sigma ^ 2} (x - \mu) ^ 2 \right).
+p(x) = \left( 2 \pi \sigma ^ 2 \right) ^ {- \frac{1}{2}} \exp \left( - \frac{1}{2 \sigma ^ 2} (x - \mu) ^ 2 \right).
 \end{equation}
 %
 
@@ -1630,10 +1646,57 @@ Thus,
 %
 
 
+%\subsection{}
+%Let $f$ be a be strictly convex function.
+%By the definition,
+%%
+%\begin{equation}
+%f \left( \lambda a + (1 - \lambda) b \right) \leq \lambda f(a) + (1 - \lambda) f(b),
+%\end{equation}
+%%
+%where $a \leq b$ and $0 \leq \lambda \leq 1$.
+%Let
+%%
+%\begin{equation}
+%x = \lambda a + (1 - \lambda) b.
+%\end{equation}
+%%
+%Then, the inequality can be written as
+%%
+%\begin{equation}
+%f(x) \leq \frac{b - x}{b - a} f(a) + \frac{x - a}{b - a} f(b).
+%\end{equation}
+%%
+%Let 
+%%
+%\begin{equation}
+%g(x) = \frac{b - x}{b - a} f(a) + \frac{x - a}{b - a} f(b) - f(x).
+%\end{equation}
+%%
+%Then
+%%
+%\begin{equation}
+%\begin{aligned}
+%g(x) &\geq 0, \\
+%g(a) &= 0, \\
+%g(b) & = 0.
+%\end{aligned}
+%\end{equation}
+%%
+%Since
+%%
+%\begin{equation}
+%\begin{aligned}
+%g'(x) =& \frac{f(b) - f(a)}{b - a} - f'(x), \\
+%g''(x) =& - f''(x),
+%\end{aligned}
+%\end{equation}
+%%
 
-
-
-
+%\stepcounter{subsection}
+%
+%
+%\subsection{}
 
 
 
