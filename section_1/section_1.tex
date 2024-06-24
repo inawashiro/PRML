@@ -1646,60 +1646,57 @@ Thus,
 %
 
 
-%\subsection{}
-%Let $f$ be a be strictly convex function.
-%By the definition,
-%%
-%\begin{equation}
-%f \left( \lambda a + (1 - \lambda) b \right) \leq \lambda f(a) + (1 - \lambda) f(b),
-%\end{equation}
-%%
-%where $a \leq b$ and $0 \leq \lambda \leq 1$.
-%Let
-%%
-%\begin{equation}
-%x = \lambda a + (1 - \lambda) b.
-%\end{equation}
-%%
-%Then, the inequality can be written as
-%%
-%\begin{equation}
-%f(x) \leq \frac{b - x}{b - a} f(a) + \frac{x - a}{b - a} f(b).
-%\end{equation}
-%%
-%Let 
-%%
-%\begin{equation}
-%g(x) = \frac{b - x}{b - a} f(a) + \frac{x - a}{b - a} f(b) - f(x).
-%\end{equation}
-%%
-%Then, the inequality can be written as
-%%
-%\begin{equation}
-%g(x) \geq 0.
-%\end{equation}
-%%
-%Since
-%%
-%\begin{equation}
-%\begin{aligned}
-%g'(x) =& \frac{f(b) - f(a)}{b - a} - f'(x), \\
-%g''(x) =& - f''(x),
-%\end{aligned}
-%\end{equation}
-%%
+\subsection{}
+Let $f$ be a strictly convex function.
+By the definition,
 %
-%%
-%\begin{equation}
-%\begin{aligned}
-%g(a) &= 0, \\
-%g(b) & = 0.
-%\end{aligned}
-%\end{equation}
-%%
-
-
-\stepcounter{subsection}
+\begin{equation}
+f \left( \lambda a + (1 - \lambda) b \right) \leq \lambda f(a) + (1 - \lambda) f(b),
+\end{equation}
+%
+where $a \leq b$ and $0 \leq \lambda \leq 1$.
+Let
+%
+\begin{equation}
+x = \lambda a + (1 - \lambda) b.
+\end{equation}
+%
+Then, the inequality can be written as
+%
+\begin{equation}
+f(x) \leq \frac{b - x}{b - a} f(a) + \frac{x - a}{b - a} f(b).
+\end{equation}
+%
+Let 
+%
+\begin{equation}
+g(x) = \frac{b - x}{b - a} f(a) + \frac{x - a}{b - a} f(b) - f(x).
+\end{equation}
+%
+Then, 
+%
+\begin{equation}
+\begin{aligned}
+g(a) &= 0, \\
+g(b) & = 0,
+\end{aligned}
+\end{equation}
+%
+and
+%
+\begin{equation}
+\begin{aligned}
+g'(x) =& \frac{f(b) - f(a)}{b - a} - f'(x), \\
+g''(x) =& - f''(x).
+\end{aligned}
+\end{equation}
+%
+Additionally, the inequality can be written as
+%
+\begin{equation}
+g(x) \geq 0.
+\end{equation}
+%
 
 
 \subsection{}
