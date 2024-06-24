@@ -1673,14 +1673,10 @@ Thus,
 %g(x) = \frac{b - x}{b - a} f(a) + \frac{x - a}{b - a} f(b) - f(x).
 %\end{equation}
 %%
-%Then
+%Then, the inequality can be written as
 %%
 %\begin{equation}
-%\begin{aligned}
-%g(x) &\geq 0, \\
-%g(a) &= 0, \\
-%g(b) & = 0.
-%\end{aligned}
+%g(x) \geq 0.
 %\end{equation}
 %%
 %Since
@@ -1692,12 +1688,49 @@ Thus,
 %\end{aligned}
 %\end{equation}
 %%
-
-%\stepcounter{subsection}
 %
-%
-%\subsection{}
+%%
+%\begin{equation}
+%\begin{aligned}
+%g(a) &= 0, \\
+%g(b) & = 0.
+%\end{aligned}
+%\end{equation}
+%%
 
+
+\stepcounter{subsection}
+
+
+\subsection{}
+Let $\mathbf{x}$ and $\mathbf{y}$ be two variables.
+Then, by the definition, 
+%
+\begin{equation}
+{\rm H}(\mathbf{x}, \mathbf{y}) = - \int \int p(\mathbf{x}, \mathbf{y}) \ln p(\mathbf{x}, \mathbf{y}) d\mathbf{x} d\mathbf{y}.
+\end{equation}
+%
+The right hand side can be written as
+%
+\begin{equation}
+\begin{aligned}
+&- \int \int p(\mathbf{x}, \mathbf{y}) \left( \ln p(\mathbf{y} | \mathbf{x}) + \ln p(\mathbf{x}) \right) d\mathbf{x} d\mathbf{y} \\
+&= - \int \int p(\mathbf{x}, \mathbf{y}) \ln p(\mathbf{y} | \mathbf{x}) d\mathbf{x} d\mathbf{y} - \int \left( \int p(\mathbf{x}, \mathbf{y}) d\mathbf{y} \right) \ln p(\mathbf{x}) d\mathbf{x}.
+\end{aligned}
+\end{equation}
+%
+The right hand side can be written as
+%
+\begin{equation}
+{\rm H}(\mathbf{y} | \mathbf{x}) + {\rm H}(\mathbf{x}).
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+{\rm H}(\mathbf{x}, \mathbf{y}) = {\rm H}(\mathbf{y} | \mathbf{x}) + {\rm H}(\mathbf{x}).
+\end{equation}
+%
 
 
 
