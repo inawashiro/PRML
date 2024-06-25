@@ -1673,30 +1673,28 @@ Let
 g(x) = \frac{b - x}{b - a} f(a) + \frac{x - a}{b - a} f(b) - f(x).
 \end{equation}
 %
-Then, 
-%
-\begin{equation}
-\begin{aligned}
-g(a) &= 0, \\
-g(b) & = 0,
-\end{aligned}
-\end{equation}
-%
-and
-%
-\begin{equation}
-\begin{aligned}
-g'(x) =& \frac{f(b) - f(a)}{b - a} - f'(x), \\
-g''(x) =& - f''(x).
-\end{aligned}
-\end{equation}
-%
-Additionally, the inequality can be written as
+Then,
 %
 \begin{equation}
 g(x) \geq 0.
 \end{equation}
 %
+Additionally, for $x > a$,
+%
+\begin{equation}
+g(x) = (x - a) \left( \frac{f(b) - f(a)}{b - a} - \frac{f(x) - f(a)}{x - a} \right).
+\end{equation}
+%
+By the mean value theorem, there exists $c$ and $d$ such that $a \leq c \leq b$, $a \leq d \leq x$ and
+%
+\begin{equation}
+\begin{aligned}
+f'(c) &= \frac{f(b) - f(a)}{b - a}, \\
+f'(d) &= \frac{f(x) - f(a)}{x - a}.
+\end{aligned}
+\end{equation}
+%
+
 
 
 \subsection{}
