@@ -101,15 +101,60 @@ Therefore,
 %
 
 
+\subsection{}
+\label{2.3}
+By the definition,
+%
+\begin{equation}
+\begin{aligned}
+{N \choose m} &= \frac{N!}{m! (N - m)!}, \\
+{N \choose m - 1} &= \frac{N!}{(m - 1)! (N - m + 1)!}
+\end{aligned}
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+{N \choose m} + {N \choose m - 1} = \frac{(N - m + 1) N! + m N!}{m! (N - m + 1)!}.
+\end{equation}
+%
+By the definition, the right hand side can be written as
+%
+\begin{equation}
+\frac{(N + 1)!}{m! (N + 1 - m)!} = {N + 1 \choose m}.
+\end{equation}
+%
+Thus,
+%
+\begin{equation}
+{N \choose m} + {N \choose m - 1} = {N + 1 \choose m}.
+\end{equation}
+%
 
-
-
-
-
-
-
-
-
+Note that 
+%
+\begin{equation}
+1 + x = \sum_{m = 0}^{1} {1 \choose m} x ^ m.
+\end{equation}
+%
+Let us assume that 
+%
+\begin{equation}
+(1 + x) ^ N = \sum_{m = 0}^{N} {N \choose m} x ^ m.
+\end{equation}
+%
+Then,
+%
+\begin{equation}
+(1 + x) ^ {N + 1} = (1 + x) \sum_{m = 0}^{N} {N \choose m} x ^ m.
+\end{equation}
+%
+By the result above, the right hand side can be written as
+%
+\begin{equation}
+\sum_{m = 0}^{N} \left( {N + 1 \choose m} - {N \choose m - 1} \right)  \left( x ^ m + x ^ {m + 1} \right)
+\end{equation}
+%
 
 
 
