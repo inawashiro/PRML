@@ -189,12 +189,54 @@ Therefore,
 %
 
 
-
-
-
-
-
-
+\subsection{}
+\label{2.4}
+Let $m$ be a variable such that
+%
+\begin{equation}
+p(m | \mu) = {N \choose m} \mu ^ m (1 - \mu) ^ {N - m}.
+\end{equation}
+%
+Then
+%
+\begin{equation}
+{\rm E} m = \sum_{m = 0}^{N} m {N \choose m} \mu ^ m (1 - \mu) ^ {N - m}.
+\end{equation}
+%
+Differentiating both sides of 
+%
+\begin{equation}
+\sum_{m = 0}^{N} {N \choose m} \mu ^ m (1 - \mu) ^ {N - m}  = 1
+\end{equation}
+%
+with respect to $\mu$ gives
+%
+\begin{equation}
+\sum_{m = 0}^{N} m {N \choose m} \mu ^ {m - 1} (1 - \mu) ^ {N - m} - \sum_{m = 0}^{N} (N - m) {N \choose m} \mu ^ m (1 - \mu) ^ {N - m - 1} = 0.
+\end{equation}
+%
+The first term of the left hand side can be written as $\frac{1}{\mu} {\rm E} m$.
+Making use of 
+%
+\begin{equation}
+\begin{aligned}
+(N - m) {N \choose m} &= N {N - 1 \choose m}, \\
+\sum_{m = 0}^{N} {N \choose m} x ^ m &= (1 + x) ^ m,
+\end{aligned}
+\end{equation}
+%
+the second term of the left hand side can be written as
+%
+\begin{equation}
+- N (1 - \mu) ^ {N - 1} \sum_{m = 0}^{N - 1} {N - 1 \choose m} \left( \frac{\mu}{1 - \mu} \right) ^ m = - N (1 - \mu) ^ {N - 1} \left( 1 + \frac{\mu}{1 - \mu} \right) ^ {N - 1}.
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+{\rm E} m - N \mu. 
+\end{equation}
+%
 
 
 
