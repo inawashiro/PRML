@@ -216,7 +216,7 @@ with respect to $\mu$ gives
 \end{equation}
 %
 The first term of the left hand side can be written as $\frac{1}{\mu} {\rm E} m$.
-Making use of 
+Since
 %
 \begin{equation}
 \begin{aligned}
@@ -238,9 +238,23 @@ Therefore,
 \end{equation}
 %
 
-
-
-
+Differentiating both sides of 
+%
+\begin{equation}
+\sum_{m = 0}^{N} {N \choose m} \mu ^ m (1 - \mu) ^ {N - m}  = 1
+\end{equation}
+%
+twice with respect to $\mu$ gives
+%
+\begin{equation}
+\begin{aligned}
+&\sum_{m = 0}^{N} m (m - 1) {N \choose m} \mu ^ {m - 2} (1 - \mu) ^ {N - m} \\
+&- 2 \sum_{m = 0}^{N} m (N - m) {N \choose m} \mu ^ {m - 1} (1 - \mu) ^ {N - m - 1} \\
+&+ \sum_{m = 0}^{N} (N - m) (N - m - 1) {N \choose m} \mu ^ m (1 - \mu) ^ {N - m - 2} = 0.
+\end{aligned}
+\end{equation}
+%
+The first term of the left hand side can be written as $\frac{1}{\mu ^ 2} {\rm E} m (m - 1)$.
 
 
 
