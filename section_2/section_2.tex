@@ -163,28 +163,28 @@ Therefore,
 %
 Thus, the assumption is proved by induction on $N$.
 
-Finally, let $x$ be a variable such that
+Finally, let $m$ be a variable such that
 %
 \begin{equation}
-p(x | \mu) = {N \choose x} \mu ^ x (1 - \mu) ^ {N - x}.
+p(m | \mu) = {N \choose m} \mu ^ m (1 - \mu) ^ {N - m}.
 \end{equation}
 %
 Then
 %
 \begin{equation}
-\sum_{x = 0}^{N} p(x | \mu) = \sum_{x = 0}^{N} {N \choose x} \mu ^ x (1 - \mu) ^ {N - x}.
+\sum_{m = 0}^{N} p(m | \mu) = \sum_{m = 0}^{N} {N \choose m} \mu ^ m (1 - \mu) ^ {N - m}.
 \end{equation}
 %
 By the result above, the right hand side can be written as
 %
 \begin{equation}
-(1 - \mu) ^ N \sum_{x = 0}^{N} {N \choose x} \left( \frac{\mu}{1 - \mu} \right) ^ x = (1 - \mu) ^ N \left( 1 + \frac{\mu}{1 - \mu} \right) ^ N.
+(1 - \mu) ^ N \sum_{m = 0}^{N} {N \choose m} \left( \frac{\mu}{1 - \mu} \right) ^ m = (1 - \mu) ^ N \left( 1 + \frac{\mu}{1 - \mu} \right) ^ N.
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-\sum_{x = 0}^{N} p(x | \mu) = 1.
+\sum_{m = 0}^{N} p(m | \mu) = 1.
 \end{equation}
 %
 
