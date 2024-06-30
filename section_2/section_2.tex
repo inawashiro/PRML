@@ -146,17 +146,47 @@ Let us assume that
 Then,
 %
 \begin{equation}
-(1 + x) ^ {N + 1} = (1 + x) \sum_{m = 0}^{N} {N \choose m} x ^ m.
+(1 + x) ^ {N + 1} = \sum_{m = 0}^{N} {N \choose m} x ^ m + \sum_{m = 0}^{N} {N \choose m} x ^ {m + 1}.
 \end{equation}
 %
 By the result above, the right hand side can be written as
 %
 \begin{equation}
-\sum_{m = 0}^{N} \left( {N + 1 \choose m} - {N \choose m - 1} \right)  \left( x ^ m + x ^ {m + 1} \right)
+\sum_{m = 0}^{N} {N \choose m} x ^ m + \sum_{m = 1}^{N + 1} {N \choose m - 1} x ^ m = 1 + x ^ {N + 1} + \sum_{m = 1}^{N} {N + 1 \choose m} x ^ m.
 \end{equation}
 %
+Therefore,
+%
+\begin{equation}
+(1 + x) ^ {N + 1} = \sum_{m = 0}^{N + 1} {N + 1 \choose m} x ^ m.
+\end{equation}
+%
+Thus, the assumption is proved by induction on $N$.
 
-
+Finally, let $x$ be a variable such that
+%
+\begin{equation}
+p(x | \mu) = {N \choose x} \mu ^ x (1 - \mu) ^ {N - x}.
+\end{equation}
+%
+Then
+%
+\begin{equation}
+\sum_{x = 0}^{N} p(x | \mu) = \sum_{x = 0}^{N} {N \choose x} \mu ^ x (1 - \mu) ^ {N - x}.
+\end{equation}
+%
+By the result above, the right hand side can be written as
+%
+\begin{equation}
+(1 - \mu) ^ N \sum_{x = 0}^{N} {N \choose x} \left( \frac{\mu}{1 - \mu} \right) ^ x = (1 - \mu) ^ N \left( 1 + \frac{\mu}{1 - \mu} \right) ^ N.
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+\sum_{x = 0}^{N} p(x | \mu) = 1.
+\end{equation}
+%
 
 
 
