@@ -307,14 +307,16 @@ By the transformation $t = x + y$, the right hand side can be written as
 \end{aligned}
 \end{equation}
 %
-By the definition and transformation $x = t \mu$, the right hand side can be written as
+By the transformation $x = t \mu$, the right hand side can be written as
 %
 \begin{equation}
 \begin{aligned}
 &\int_{0}^{\infty} \left( \int_{0}^{1} (t \mu) ^ {a - 1} t ^ {b - 1} (1 - \mu) ^ {b - 1} t d\mu \right) \exp (- t) dt \\
-&= \Gamma (a + b) \int_{0}^{1} \mu ^ {a - 1} (1 - \mu) ^ {b - 1} d\mu.
+&= \int_{0}^{1} \mu ^ {a - 1} (1 - \mu) ^ {b - 1} d\mu \int_{0}^{\infty} t ^ {a + b - 1} \exp ( - t ) dt.
 \end{aligned}
 \end{equation}
+%
+By the definition, the second integral of the right hand side  can be written as $\Gamma(a + b)$.
 %
 Therefore,
 %
