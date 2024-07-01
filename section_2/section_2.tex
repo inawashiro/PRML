@@ -219,22 +219,19 @@ The first term of the left hand side can be written as $\frac{1}{\mu} {\rm E} m$
 Since
 %
 \begin{equation}
-\begin{aligned}
-(N - m) {N \choose m} &= N {N - 1 \choose m}, \\
-\sum_{m = 0}^{N} {N \choose m} x ^ m &= (1 + x) ^ m,
-\end{aligned}
+(N - m) {N \choose m} = N {N - 1 \choose m},
 \end{equation}
 %
 the second term of the left hand side can be written as
 %
 \begin{equation}
-- N (1 - \mu) ^ {N - 1} \sum_{m = 0}^{N - 1} {N - 1 \choose m} \left( \frac{\mu}{1 - \mu} \right) ^ m = - N (1 - \mu) ^ {N - 1} \left( 1 + \frac{\mu}{1 - \mu} \right) ^ {N - 1}.
+- N \sum_{m = 0}^{N - 1} {N - 1 \choose m} \mu ^ m (1 - \mu) ^ {N - m - 1} = - N.
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-{\rm E} m - N \mu. 
+{\rm E} m = N \mu. 
 \end{equation}
 %
 
@@ -255,7 +252,42 @@ twice with respect to $\mu$ gives
 \end{equation}
 %
 The first term of the left hand side can be written as $\frac{1}{\mu ^ 2} {\rm E} m (m - 1)$.
-
+Since
+%
+\begin{equation}
+\begin{aligned}
+m (N - m) {N \choose m} &= N (N - 1) {N - 2 \choose m - 1}, \\
+(N - m) (N - m - 1) {N \choose m} &= N (N - 1) {N - 2 \choose m},
+\end{aligned}
+\end{equation}
+%
+the second and third term of the left hand side can be written as
+%
+\begin{equation}
+\begin{aligned}
+- 2 N (N - 1) \sum_{m = 1}^{N - 1} {N - 2 \choose m - 1} \mu ^ {m - 1} (1 - \mu) ^ {N - m - 1} &= - 2 N (N - 1), \\
+N (N - 1) \sum_{m = 0}^{N} {N - 2 \choose m} \mu ^ m (1 - \mu) ^ {N - m - 2} &= N (N - 1).
+\end{aligned}
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+{\rm E} m (m - 1) = N (N - 1) \mu ^ 2.
+\end{equation}
+%
+Thus, since 
+%
+\begin{equation}
+{\rm var} m = {\rm E} m (m - 1) + {\rm E} m - ( {\rm E} m ) ^ 2,
+\end{equation}
+%
+we have
+%
+\begin{equation}
+{\rm var} m = N \mu ( 1 - \mu).
+\end{equation}
+%
 
 
 
